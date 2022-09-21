@@ -1,4 +1,4 @@
-<form method="POST" action="{{ route('inquiry.send') }}"　enctype='multipart/form-data'>
+<form method="POST" action="{{ route('inquiry.send') }}" enctype='multipart/form-data'>
     @csrf
     <label>名前：</label>
       {{ $inputs['name'] }}
@@ -21,8 +21,13 @@
     <br>
 
     <label>画像：</label>
-    {{ $inputs['image'] }}
-    <input name="image" value="{{ $inputs['image'] }}" type="hidden">
+    <br>
+    @isset($inputs['image'])
+    {{ $original_name }}
+    <br>
+    <img src="{{ asset('storage/' . $path) }}" width="100" height="100">
+    <input name="path" value="{{ $path }}" type="hidden">
+    @endisset
     <br>
 
     <label>お問い合わせ内容</label>
