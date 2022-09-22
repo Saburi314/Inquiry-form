@@ -39,10 +39,9 @@ class ValidateRequest extends FormRequest
             'name.required' => '名前は必ず入力してください',
             'email.required' => 'メールアドレスは必ず入力してください',
             'email.email' => '正しい形式でメールアドレスを入力してください',
-            'tel.regex' => '電話番号はXXX-XXXX-XXXXの形式で入力してください',
+            'tel.regex' => '電話番号は〇〇〇-△△△△-××××の形式で入力してください',
             'gender.required' => '性別は必ず選択してください',
             'context.required' => 'お問い合わせ内容は必ず入力してください'
         ];
     }
-
 }

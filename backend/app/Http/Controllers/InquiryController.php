@@ -40,7 +40,6 @@ class InquiryController extends Controller
 
     public function send(Request $request)
     {
-
         $inputs = $request->all();
         $action = $request->input('action');
 
@@ -64,7 +63,5 @@ class InquiryController extends Controller
 
             return view('inquiry.send', ['inputs' => $inputs]);
         }
-
-
     }
 }
