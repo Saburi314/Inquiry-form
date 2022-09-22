@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // 「送信」ボタンの要素を取得
     const submit = document.querySelector('.submit');
     var validateCount = 0;
+
     // 「送信」ボタンの要素にクリックイベントを設定する
     submit.addEventListener('click', (e) => {
 
@@ -104,7 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
             validateCount++;
         }
 
-
+        
         if (validateCount == 5) {
             // すべてのバリデーションを通過した場合
             return true;
@@ -115,6 +116,5 @@ window.addEventListener('DOMContentLoaded', () => {
             // カウントを初期化
             validateCount = 0;
         }
-
     });
 });
