@@ -93,7 +93,7 @@
         <!-- 送信ボタン -->
         <tr>
             <th></th>
-            <td><input type="submit" class="submit"></td>
+            <td><button type="submit" class="submit" value="submit">送信</button></td>
         </tr>
         </tbody>
     </table>

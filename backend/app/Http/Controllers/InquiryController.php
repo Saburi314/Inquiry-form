@@ -26,15 +26,9 @@ class InquiryController extends Controller
                 ->file('image')
                 ->store('images', 'public');
 
-        //画像の名前を取得
-            $original_name = $request
-                ->file('image')
-                ->getClientOriginalName();
-
             return view('inquiry.confirm', ['inputs' => $inputs,
-                'path' => $path, 'original_name' => $original_name]);
+                'path' => $path]);
         }
-
         return view('inquiry.confirm', ['inputs' => $inputs]);
     }
 
@@ -50,8 +44,6 @@ class InquiryController extends Controller
                 ->withInput($inputs);
         } else {
             //送信ボタンがクリックされた場合
-
-            //DBにデータを挿入する
             Inquiry::insert([
                 'name' => $request->name,
                 'email' =>$request->email,

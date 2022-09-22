@@ -3,6 +3,6 @@
 @section('title', '完了画面')
 
 @section('content')
-<p>送信完了しました。</p>
+<h1>送信完了しました。</h1>
 <p>お問い合わせありがとうございました。</p>
 @endsection
