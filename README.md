@@ -1,8 +1,7 @@
 『概要』
-PHP 8.0
-Laravel 8.
-Composer 2.
-MySQL 
+PHP 8.0.23
+Laravel 8.83.23
+MySQL 8.0.30
 
 backend　ディレクトリにlaravelのソースが搭載されています。  
 infra ディレクトリにmysql、nginx、php などの設定ファイルが搭載されています。　　
