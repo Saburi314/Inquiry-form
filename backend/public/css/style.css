@@ -2,3 +2,9 @@ button.submit {
     margin: 10px 0px;
     padding: 5px 20px;
 }
+
+img#preview {
+    display: none;
+    width: 100px;
+    height: 100px;
+}

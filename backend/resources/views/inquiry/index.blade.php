@@ -75,7 +75,8 @@
         </tr>
         <tr>
             <th><label for="image">画像</label></th>
-            <td><input type="file" name="image" id="image" value="{{ old('image') }}"></td>
+            <td><input type="file" name="image" id="image" accept="image/*" onchange="setImage(this);" onclick="this.value = '';"></td>
+            <td><img id="preview"></td>
         </tr>
         <!-- 問い合わせ内容 -->
         <tr>
