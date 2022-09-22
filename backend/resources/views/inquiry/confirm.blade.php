@@ -1,3 +1,8 @@
+@extends('layouts.base')
+
+@section('title', '確認画面')
+
+@section('content')
 <form method="POST" action="{{ route('inquiry.send') }}" enctype='multipart/form-data'>
     @csrf
     <label>名前：</label>
@@ -39,3 +44,4 @@
     <button type="submit" name="action" value="back">入力内容修正</button>
     <button type="submit" name="action" value="submit">送信</button>
 </form>
+@endsection

@@ -1,7 +1,8 @@
-<link rel="stylesheet" href="{{ asset('/css/style.css')  }}" >
-<script src="{{ asset('/js/validate.js') }}"></script>
+@extends('layouts.base')
 
+@section('title', '問い合わせ画面')
 
+@section('content')
 <h1>お問い合わせ</h1>
 
 <form method="POST" action="{{ route('inquiry.confirm') }}" enctype='multipart/form-data' name="inquiry_form">
@@ -97,3 +98,4 @@
         </tbody>
     </table>
 </form>
+@endsection
