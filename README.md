@@ -1,7 +1,8 @@
-『概要』
-PHP 8.0.23
-Laravel 8.83.23
-MySQL 8.0.30
+『概要』  
+PHP 8.0.23  
+Laravel 8.83.23  
+Composer 2.4.1  
+MySQL 8.0.30  
 
 backend　ディレクトリにlaravelのソースが搭載されています。  
 infra ディレクトリにmysql、nginx、php などの設定ファイルが搭載されています。　　
@@ -14,19 +15,19 @@ infra ディレクトリにmysql、nginx、php などの設定ファイルが搭
 不要なコメントが残っていたり、コードが読みづらくなっています。  
 ご了承ください。  
 
-『今後、修正すべき点』
-現時点で、いくつかの問題点が見つかっています。  
+『修正すべき点』
+現時点で、いくつかの修正点が見つかっています。  
 ・画像をアップした時点で画像が表示されるようにできていない  
 ・入力内容修正を押した後に、画像データが保持できていない
 ※その他、フォームが正しく機能しているかテスト設計書などを作成し、テストする予定です。（+α課題）
 
 『ローカル環境構築方法』
 
-1.projectをpullするディレクトリ配下へ移動
+1.projectをpullしたいディレクトリ配下へ移動
 
 2.『git clone https://github.com/Saburi314/Inquiry-form.git 』コマンドを実行する
 
-3.『cd Inquiry-form』でdocker-compose.ymlがあるディレクトリへ移動
+3.『cd Inquiry-form』でdocker-compose.yml　ファイルがあるディレクトリへ移動
 
 3.『docker-compose build』をコマンドで実行し、イメージを作成する
 
@@ -36,7 +37,7 @@ infra ディレクトリにmysql、nginx、php などの設定ファイルが搭
 
 6.コンテナ内にて、『composer install』を実行し、vendorディレクトリを作成する
 
-7.『cp .env.example .env』を実行し、.envファイルをコピー
+7.『cp .env.example .env』を実行し、.envファイルを作成
 
 8.『chmod 777 -R storage』を実行し、権限を付与する
 
