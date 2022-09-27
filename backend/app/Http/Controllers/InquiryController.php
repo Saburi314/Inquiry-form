@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ValidateRequest;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Inquiry;
+use Illuminate\Support\Facades\File;
 
 class InquiryController extends Controller
 {
@@ -22,12 +23,11 @@ class InquiryController extends Controller
         //画像ファイルが存在する場合
         if (isset($inputs['image'])) {
         //画像をストレージ(app/public/images)へ保存し、パスを取得
-            $path = $request
+            $inputs['path'] = $request
                 ->file('image')
                 ->store('images', 'public');
-
-            return view('inquiry.confirm', ['inputs' => $inputs,
-                'path' => $path]);
+            // 画像の名前を取得
+            $inputs['originalName']  = $request->file('image')->getClientOriginalName();
         }
         return view('inquiry.confirm', ['inputs' => $inputs]);
     }
@@ -39,10 +39,12 @@ class InquiryController extends Controller
 
         if ($action == 'back') {
             //戻るボタンがクリックされた場合
+//            //Storageの画像を削除する
+//            Storage::disk('public')->delete($path);
             return redirect()
                 ->route('inquiry.index')
                 ->withInput($inputs);
-        } else {
+        } elseif($action == 'submit') {
             //送信ボタンがクリックされた場合
             Inquiry::insert([
                 'name' => $request->name,

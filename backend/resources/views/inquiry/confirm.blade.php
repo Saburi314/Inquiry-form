@@ -35,8 +35,13 @@
         <tr>
             <th><label for="image">画像：</label></th>
             @isset($inputs['image'])
-                <td><img src="{{ asset('storage/' . $path) }}" width="100" height="100"></td>
-                <input name="path" value="{{ $path }}" type="hidden">
+                <td>
+                    <p>{{ $inputs['originalName'] }}</p>
+                    <img src="{{ asset('storage/' . $inputs['path']) }}" width="100" height="100">
+                </td>
+                <input name="image" value="{{ $inputs['image'] }}" type="hidden">
+                <input name="path" value="{{ $inputs['path'] }}" type="hidden">
+                <input name="originalName" value="{{ $inputs['originalName'] }}" type="hidden">
             @endisset
         </tr>
         <!-- お問い合わせ内容 -->
