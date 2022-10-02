@@ -12,5 +12,4 @@ class Inquiry extends Model
     public $timestamps = false;
 
     protected $table = 'inquiries';
-
 }
