@@ -4,8 +4,9 @@ Laravel 8.83.23
 Composer 2.4.1  
 MySQL 8.0.30  
 
-backend　ディレクトリにlaravelのソースが搭載されています。  
+backend　ディレクトリにlaravelのソースコードが搭載されています。  
 infra ディレクトリにmysql、nginx、php などの設定ファイルが搭載されています。　　
+design_document ディレクトリにテーブル設計書及び、ER図が搭載されています。
 
 環境構築後、  
 [http://127.0.0.1:8000/inquiry](http://127.0.0.1:8000/inquiry)  にアクセスすることで、問い合わせフォームが表示されます。  

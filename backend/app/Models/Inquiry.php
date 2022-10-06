@@ -13,4 +13,7 @@ class Inquiry extends Model
 
     protected $table = 'inquiries';
 
+    protected $guarded = [
+        'id',
+    ];
 }

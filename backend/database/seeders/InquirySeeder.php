@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\Inquiry;
+use Illuminate\Database\Seeder;
 
 class InquirySeeder extends Seeder
 {

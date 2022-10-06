@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InquiryController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +26,3 @@ Route::post('/inquiry/confirm', [InquiryController::class, 'confirm'])->name('in
 
 //送信完了ページ
 Route::post('/inquiry/send', [InquiryController::class, 'send'])->name('inquiry.send');
-
