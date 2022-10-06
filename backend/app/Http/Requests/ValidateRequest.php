@@ -28,7 +28,7 @@ class ValidateRequest extends FormRequest
             'email' => 'required|email',
             'tel' => 'nullable|regex:/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/',
             'gender'  => 'required',
-            'image'  => 'nullable',
+            'image'  => 'nullable|mimes:jpg,jpeg,png,gif',
             'context'  => 'required',
         ];
     }
@@ -41,7 +41,8 @@ class ValidateRequest extends FormRequest
             'email.email' => '正しい形式でメールアドレスを入力してください',
             'tel.regex' => '電話番号は〇〇〇-△△△△-××××の形式で入力してください',
             'gender.required' => '性別は必ず選択してください',
-            'context.required' => 'お問い合わせ内容は必ず入力してください'
+            'context.required' => 'お問い合わせ内容は必ず入力してください',
+            'image.mimes' => '画像ファイルタイプはpg,jpeg,png,gifのいずれかにしてください',
         ];
     }
 }
